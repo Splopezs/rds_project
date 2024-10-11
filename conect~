@@ -1,0 +1,19 @@
+import pymysql
+
+endpoint= 'db-132.cfsk0osuq674.us-west-1.rds.amazonaws.com'
+user = 'sandra'
+passwd = 'splopezs21'
+
+
+
+connection = pymysql.connect(
+    host=endpoint,
+    user=user,
+    password=passwd
+)
+
+
+
+
+print("Successful connection to the rds_project) 
+

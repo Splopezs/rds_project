@@ -1,0 +1,28 @@
+import pymysql
+
+endpoint= 'db-132.cfsk0osuq674.us-west-1.rds.amazonaws.com'
+user = 'sandra'
+password = 'Splopezs21'
+
+
+
+connection = pymysql.connect(
+    host=endpoint,
+    user=user,
+    password=password
+)
+
+
+print("Successful connection to the rds_project") 
+
+
+with connection.cursor() as cursor:
+
+    cursor.execute("SELECT VERSION()")
+
+    result = cursor.fetchone()
+
+    print("Database version:", result)
+
+
+connection.close()
